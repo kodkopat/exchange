@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Fixer.io\Response\" />
+    <Folder Include="Fixer.io\Request\" />
+  </ItemGroup>
+
 </Project>

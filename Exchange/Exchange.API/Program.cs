@@ -1,3 +1,4 @@
+using Exchange.DataAccess;
 namespace Exchange.API
 {
     public class Program
@@ -9,6 +10,8 @@ namespace Exchange.API
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<AppDbContext>();
+
 
             var app = builder.Build();
 
