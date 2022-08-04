@@ -11,7 +11,7 @@ namespace Exchange.Domain.Models
     {
         public Guid TransactionId { get; set; }
         public string Destination { get; set; }
-        public decimal DestinationRate { get; set; }
+        public decimal DestinationAmount { get; set; }
 
         virtual public Transaction Transaction { get; set; }
     }

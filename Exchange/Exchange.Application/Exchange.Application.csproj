@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.1.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.1.0" />
@@ -20,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Exchange.Communicator\Exchange.Communicator.csproj" />
     <ProjectReference Include="..\Exchange.Contract\Exchange.Contract.csproj" />
+    <ProjectReference Include="..\Exchange.DataAccess\Exchange.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

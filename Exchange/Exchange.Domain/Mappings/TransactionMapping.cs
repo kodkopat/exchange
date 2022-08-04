@@ -14,7 +14,7 @@ namespace Exchange.Domain.Mappings
         protected override void Map(EntityTypeBuilder<Transaction> eb)
         {
             eb.Property(c => c.Source).HasMaxLength(10).IsRequired();
-            eb.Property(c => c.SourceRate).IsRequired();
+            eb.Property(c => c.SourceAmount).IsRequired();
             eb.HasMany(c => c.TransactionDetail).WithOne(c => c.Transaction).HasForeignKey(c => c.TransactionId).IsRequired().OnDelete(DeleteBehavior.Cascade);
             eb.ToTable("Transaction");
         }

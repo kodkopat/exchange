@@ -1,19 +1,18 @@
-﻿using Exchange.Domain.Models.Base;
+﻿using Exchange.Contract.Response.Query;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exchange.Domain.Models
+namespace Exchange.Contract.Request.Command
 {
-    public class Transaction : SimpleEntity
+    public class SaveTransactionCommand : IRequest<SaveTransactionCommandResult>
     {
-        public DateTime Date { get; set; }
         public int AccountId { get; set; }
         public string Source { get; set; }
         public decimal SourceAmount { get; set; }
-
-        virtual public ICollection<TransactionDetail> TransactionDetail { get; set; }
+        public List<string> Destination { get; set; }
     }
 }

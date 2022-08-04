@@ -21,6 +21,16 @@ namespace Exchange.API.Controllers
             return Ok(await _mediator.Send(new GetCurrenciesQuery()));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetRates([FromQuery] string Source, [FromQuery] string[] Destination)
+        {
+
+            return Ok(await _mediator.Send(new GetRatesQuery
+            {
+                Source = Source,
+                Destination = Destination.ToList()
+            }));
+        }
 
     }
 }

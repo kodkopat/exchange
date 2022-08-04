@@ -6,6 +6,7 @@ using Exchange.Contract.Request.Query;
 using FluentValidation;
 using Exchange.Application.Validators;
 using Exchange.Communicator.Fixer.io;
+using Microsoft.OpenApi.Models;
 
 namespace Exchange.API
 {
@@ -17,7 +18,14 @@ namespace Exchange.API
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Exchange API", Version = "v1" });
+                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+            });
+
             builder.Services.AddDbContext<AppDbContext>();
             builder.Services.AddOptions();
             builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
