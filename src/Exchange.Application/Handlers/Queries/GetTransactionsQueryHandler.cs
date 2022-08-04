@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
 using Exchange.Domain.DataTransferObjects;
 using AutoMapper;
+using Exchange.Application.Exceptions;
 
 namespace Exchange.Application.Handlers.Queries
 {
@@ -34,9 +35,14 @@ namespace Exchange.Application.Handlers.Queries
         }
 
 
-        public async Task<GetTransactionsQueryResult> Handle(GetTransactionsQuery request, CancellationToken cancellationToken)
+        public async Task<GetTransactionsQueryResult> Handle(GetTransactionsQuery request,
+                                                             CancellationToken cancellationToken)
         {
             _validator.ValidateAndThrow(request);
+
+            //throw custom exception if customer not found
+            if (!_appDbContext.Transactions.Any(c => c.AccountId == request.AccountId))
+                throw new InvalidAccountException(request.AccountId);
 
             var res = _appDbContext.Transactions
                 .Include(c => c.TransactionDetail)
