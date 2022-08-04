@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C9D1EFC3-BDC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EDD09AE4-D859-4166-BD97-E531BB16E131}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.API", "Exchange.API\Exchange.API.csproj", "{06622D47-E416-49BA-B675-92E43D5E2721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.API", "src\Exchange.API\Exchange.API.csproj", "{06622D47-E416-49BA-B675-92E43D5E2721}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Application", "src\Exchange.Application\Exchange.Application.csproj", "{E2C82376-8148-489B-9D6C-170F90B22D8D}"
 EndProject

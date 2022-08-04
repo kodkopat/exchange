@@ -7,6 +7,8 @@ using FluentValidation;
 using Exchange.Application.Validators;
 using Exchange.Communicator.Fixer.io;
 using Microsoft.OpenApi.Models;
+using AutoMapper;
+using Exchange.Domain.Automapper;
 
 namespace Exchange.API
 {
@@ -29,12 +31,12 @@ namespace Exchange.API
             builder.Services.AddDbContext<AppDbContext>();
             builder.Services.AddOptions();
             builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
-
             builder.Services.AddMediatR(Assembly.Load("Exchange.Application"));
             builder.Services.AddMediatR(Assembly.Load("Exchange.Contract"));
             builder.Services.AddScoped<IFixerioCommunicator, FixerioCommunicator>();
-
             builder.Services.AddValidatorsFromAssemblyContaining<GetRatesQueryValidator>();
+            builder.Services.AddSingleton(new MapperConfiguration(mc => mc.AddProfile(new MappingProfile())).CreateMapper());
+
 
             var app = builder.Build();
 

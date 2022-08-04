@@ -1,4 +1,5 @@
 using Exchange.Contract.Request.Command;
+using Exchange.Contract.Request.Query;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,16 +19,18 @@ namespace Exchange.API.Controllers
         /// <summary>
         /// get all transactions for spesific user
         /// </summary>
+        /// <param name="AccountId">account Id</param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> List()
+        public async Task<IActionResult> List([FromQuery] int AccountId)
         {
-            return Ok();
+            return Ok(await _mediator.Send(new GetTransactionsQuery { AccountId = AccountId }));
         }
 
         /// <summary>
         /// save new exchange transaction
         /// </summary>
+        /// <param name="command"></param>
         /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Save(SaveTransactionCommand command)

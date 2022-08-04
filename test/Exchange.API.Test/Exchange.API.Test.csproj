@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Exchange.API\Exchange.API.csproj" />
+    <ProjectReference Include="..\..\src\Exchange.API\Exchange.API.csproj" />
   </ItemGroup>
 
 </Project>
