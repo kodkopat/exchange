@@ -1,0 +1,6 @@
+{
+  "RateService": {
+    "Fixer": "https://api.apilayer.com/fixer/",
+    "ApiKey": "hQjxubI6hegWlSW6OJ9mavZQJk6ntglP"
+  }
+}
