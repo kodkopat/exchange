@@ -1,3 +1,5 @@
+using Exchange.Contract.Request.Query;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exchange.API.Controllers
@@ -6,11 +8,18 @@ namespace Exchange.API.Controllers
     [Route("[controller]")]
     public class ExchangeRateController : ControllerBase
     {
+        public readonly IMediator _mediator;
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        public ExchangeRateController(IMediator mediator)
         {
-            return Ok();
+            _mediator = mediator;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Get([FromBody] GetRatesQuery model)
+        {
+            var res = await _mediator.Send(model);
+            return Ok(res);
         }
     }
 }

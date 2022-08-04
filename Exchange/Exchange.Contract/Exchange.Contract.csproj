@@ -7,16 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Commands\" />
-    <Folder Include="Validators\" />
+    <Folder Include="Request\Command\" />
+    <Folder Include="Response\Command\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Exchange.Contract\Exchange.Contract.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,13 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Exchange.Application\Exchange.Application.csproj" />
     <ProjectReference Include="..\Exchange.Communicator\Exchange.Communicator.csproj" />
+    <ProjectReference Include="..\Exchange.Contract\Exchange.Contract.csproj" />
     <ProjectReference Include="..\Exchange.DataAccess\Exchange.DataAccess.csproj" />
     <ProjectReference Include="..\Exchange.Domain\Exchange.Domain.csproj" />
   </ItemGroup>

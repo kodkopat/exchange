@@ -7,7 +7,7 @@ namespace Exchange.API.Controllers
     public class ExchangeController : ControllerBase
     {
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Post()
         {
             return Ok();
