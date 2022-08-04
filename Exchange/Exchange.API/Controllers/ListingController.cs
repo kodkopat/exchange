@@ -3,14 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 namespace Exchange.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class ExchangeController : ControllerBase
     {
 
-        [HttpPost]
-        public async Task<IActionResult> Post()
+
+        [HttpGet]
+
+        public async Task<IActionResult> GetCurencyList()
         {
             return Ok();
         }
+
+
     }
 }

@@ -8,5 +8,7 @@ namespace Exchange.Contract.Response.Query
 {
     public class GetRatesQueryResult
     {
+        public string Source { get; set; }
+        public dynamic Destination { get; set; }
     }
 }

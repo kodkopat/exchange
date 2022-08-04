@@ -34,7 +34,13 @@ namespace Exchange.Application.Handlers.Queries
                 Destenations = request.Destination
             });
 
-            return new GetRatesQueryResult();
+            return new GetRatesQueryResult()
+            {
+                Source = res.@base,
+                Destination = res.rates
+            };
         }
+
+
     }
 }
