@@ -21,7 +21,6 @@
     <ProjectReference Include="..\Exchange.Communicator\Exchange.Communicator.csproj" />
     <ProjectReference Include="..\Exchange.Contract\Exchange.Contract.csproj" />
     <ProjectReference Include="..\Exchange.DataAccess\Exchange.DataAccess.csproj" />
-    <ProjectReference Include="..\Exchange.Domain\Exchange.Domain.csproj" />
   </ItemGroup>
 
 </Project>
