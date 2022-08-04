@@ -9,21 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EDD09AE4-D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.API", "Exchange.API\Exchange.API.csproj", "{06622D47-E416-49BA-B675-92E43D5E2721}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Application", "src\Exchange.Application\Exchange.Application.csproj", "{E2C82376-8148-489B-9D6C-170F90B22D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Application", "Exchange.Application\Exchange.Application.csproj", "{E2C82376-8148-489B-9D6C-170F90B22D8D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Communicator", "src\Exchange.Communicator\Exchange.Communicator.csproj", "{4B93B145-D543-4B8A-860D-F6DA690C5107}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Communicator", "Exchange.Communicator\Exchange.Communicator.csproj", "{4B93B145-D543-4B8A-860D-F6DA690C5107}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.DataAccess", "src\Exchange.DataAccess\Exchange.DataAccess.csproj", "{021F84F5-6D38-4FAC-AC7E-D2E0C8493DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.DataAccess", "Exchange.DataAccess\Exchange.DataAccess.csproj", "{021F84F5-6D38-4FAC-AC7E-D2E0C8493DE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Application.Test", "test\Exchange.Application.Test\Exchange.Application.Test.csproj", "{29F2934E-6AE2-4769-B79F-CB705F180DD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Application.Test", "Exchange.Application.Test\Exchange.Application.Test.csproj", "{29F2934E-6AE2-4769-B79F-CB705F180DD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.API.Test", "test\Exchange.API.Test\Exchange.API.Test.csproj", "{CC789D6C-F3E8-4CEF-826B-7127A5843FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.API.Test", "Exchange.API.Test\Exchange.API.Test.csproj", "{CC789D6C-F3E8-4CEF-826B-7127A5843FC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Domain", "src\Exchange.Domain\Exchange.Domain.csproj", "{CC1FC3F9-65B4-4E7F-9C80-179EBD1F85E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Domain", "Exchange.Domain\Exchange.Domain.csproj", "{CC1FC3F9-65B4-4E7F-9C80-179EBD1F85E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.Common", "src\Exchange.Common\Exchange.Common.csproj", "{65BC2A21-6243-4015-8E93-A05B7BBC0021}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.Common", "Exchange.Common\Exchange.Common.csproj", "{65BC2A21-6243-4015-8E93-A05B7BBC0021}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.Contract", "src\Exchange.Contract\Exchange.Contract.csproj", "{8DD99BE1-2BFF-477C-91AF-9A5E04C5C22D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange.Contract", "Exchange.Contract\Exchange.Contract.csproj", "{8DD99BE1-2BFF-477C-91AF-9A5E04C5C22D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

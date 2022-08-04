@@ -27,7 +27,7 @@ namespace Exchange.Application.Handlers.Queries
             _validator = validator;
         }
 
-
+        //this method will not use /convert API of fixer.io service
         public async Task<SaveTransactionCommandResult> Handle(SaveTransactionCommand request, CancellationToken cancellationToken)
         {
             _validator.ValidateAndThrow(request);
@@ -40,6 +40,7 @@ namespace Exchange.Application.Handlers.Queries
             });
 
             //open a new transaction fo insert transaction row and its details
+            //this lines commented because of not supporting of transaction method in in-memory database
             //using (var tra = _appDbContext.Database.BeginTransaction())
             //{
             //    try
