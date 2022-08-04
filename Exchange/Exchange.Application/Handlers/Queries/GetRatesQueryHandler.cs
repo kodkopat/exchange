@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Dynamic;
 namespace Exchange.Application.Handlers.Queries
 {
     public class GetRatesQueryHandler : IRequestHandler<GetRatesQuery, GetRatesQueryResult>
@@ -28,16 +28,27 @@ namespace Exchange.Application.Handlers.Queries
         {
             _validator.ValidateAndThrow(request);
 
-            var res = _communicator.GetRates(new Communicator.Fixer.io.Request.FixerioGetRatesRequest
+            //check if requested symbols existed in service
+            var symbols = _communicator.GetSymbols().symbols;
+            request.Destination.ForEach(x =>
+            {
+                if (!symbols.Select(x => x.Key).Contains(x))
+                    throw new Exception("requested Symbol not found");
+            });
+
+            if (!symbols.Select(c => c.Key).Any(c => c == request.Source))
+                throw new Exception("requested Symbol not found");
+
+
+            var rates = _communicator.GetRates(new Communicator.Fixer.io.Request.FixerioGetRatesRequest
             {
                 Source = request.Source,
                 Destenations = request.Destination
             });
-
             return new GetRatesQueryResult()
             {
-                Source = res.@base,
-                Destination = res.rates
+                Source = rates.@base,
+                Destination = rates.rates
             };
         }
 

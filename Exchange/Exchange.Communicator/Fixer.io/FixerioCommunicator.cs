@@ -21,8 +21,16 @@ namespace Exchange.Communicator.Fixer.io
             request.AddHeader("apikey", Settings.RateService.ApiKey);
             request.Method = Method.Get;
             var response = client.Get<FixerioRatesResponse>(request);
-
-
+            return response;
+        }
+        public FixerioSymbolsResponse GetSymbols()
+        {
+            string url = $"{Settings.RateService.Fixer}symbols";
+            var client = new RestClient(url);
+            var request = new RestRequest();
+            request.AddHeader("apikey", Settings.RateService.ApiKey);
+            request.Method = Method.Get;
+            var response = client.Get<FixerioSymbolsResponse>(request);
             return response;
         }
         private string GenerateUrl(FixerioGetRatesRequest model)
