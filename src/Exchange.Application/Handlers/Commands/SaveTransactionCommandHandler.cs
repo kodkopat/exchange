@@ -15,8 +15,9 @@ namespace Exchange.Application.Handlers.Queries
 {
     public class SaveTransactionCommandHandler : IRequestHandler<SaveTransactionCommand, SaveTransactionCommandResult>
     {
-        private readonly IValidator<SaveTransactionCommand> _validator;
+     
         private readonly IFixerioCommunicator _communicator;
+        private readonly IValidator<SaveTransactionCommand> _validator;
         private readonly AppDbContext _appDbContext;
         public SaveTransactionCommandHandler(IFixerioCommunicator communicator,
                                              AppDbContext appDbContext,
