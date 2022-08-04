@@ -3,6 +3,9 @@ using System.Reflection;
 using MediatR;
 using Exchange.Application.Handlers.Queries;
 using Exchange.Contract.Request.Query;
+using FluentValidation;
+using Exchange.Application.Validators;
+using Exchange.Communicator.Fixer.io;
 
 namespace Exchange.API
 {
@@ -21,6 +24,9 @@ namespace Exchange.API
 
             builder.Services.AddMediatR(Assembly.Load("Exchange.Application"));
             builder.Services.AddMediatR(Assembly.Load("Exchange.Contract"));
+            builder.Services.AddScoped<IFixerioCommunicator, FixerioCommunicator>();
+
+            builder.Services.AddValidatorsFromAssemblyContaining<GetRatesQueryValidator>();
 
             var app = builder.Build();
 

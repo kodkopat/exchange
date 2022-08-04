@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Fixer.io\Response\" />
-    <Folder Include="Fixer.io\Request\" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exchange.Common\Exchange.Common.csproj" />
   </ItemGroup>
 
 </Project>

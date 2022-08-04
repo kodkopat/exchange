@@ -18,8 +18,7 @@ namespace Exchange.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Get([FromBody] GetRatesQuery model)
         {
-            var res = await _mediator.Send(model);
-            return Ok(res);
+            return Ok(await _mediator.Send(model));
         }
     }
 }

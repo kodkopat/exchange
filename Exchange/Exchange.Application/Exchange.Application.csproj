@@ -8,14 +8,17 @@
 
   <ItemGroup>
     <Folder Include="Handlers\Commands\" />
-    <Folder Include="Validators\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.1.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Exchange.Communicator\Exchange.Communicator.csproj" />
     <ProjectReference Include="..\Exchange.Contract\Exchange.Contract.csproj" />
   </ItemGroup>
 
