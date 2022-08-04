@@ -2,7 +2,7 @@
 
 namespace Exchange.Communicator.Fixer.io.Response
 {
-    public class FixerioSymbolsResponse
+    public class FixerioGetCurrenciesResponse
     {
         public bool success { get; set; }
         public ExpandoObject symbols { get; set; }

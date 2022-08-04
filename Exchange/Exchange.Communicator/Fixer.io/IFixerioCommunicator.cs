@@ -11,6 +11,6 @@ namespace Exchange.Communicator.Fixer.io
     public interface IFixerioCommunicator
     {
         FixerioRatesResponse GetRates(FixerioGetRatesRequest model);
-        FixerioSymbolsResponse GetSymbols();
+        FixerioGetCurrenciesResponse GetSymbols();
     }
 }

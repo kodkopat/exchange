@@ -23,14 +23,14 @@ namespace Exchange.Communicator.Fixer.io
             var response = client.Get<FixerioRatesResponse>(request);
             return response;
         }
-        public FixerioSymbolsResponse GetSymbols()
+        public FixerioGetCurrenciesResponse GetSymbols()
         {
             string url = $"{Settings.RateService.Fixer}symbols";
             var client = new RestClient(url);
             var request = new RestRequest();
             request.AddHeader("apikey", Settings.RateService.ApiKey);
             request.Method = Method.Get;
-            var response = client.Get<FixerioSymbolsResponse>(request);
+            var response = client.Get<FixerioGetCurrenciesResponse>(request);
             return response;
         }
         private string GenerateUrl(FixerioGetRatesRequest model)
